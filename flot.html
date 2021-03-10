@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--Bootstrap CSS 4.3.1 version -->
+	<link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+	<!--Font-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style >
+
+		body{
+			font-family: 'Roboto','Arial', sans-serif;
+			background-color: #f0f2f0;
+
+		}
+		.header{
+			position: relative;
+		}
+		.header_top{
+			  height: 56px;
+			  padding-top: 10px;
+			  padding-left: 150px;
+			  background-color:  #3a3d50;
+
+			}
+
+			.header_bottom{
+			  height: 40px;
+			  padding-left: 100px;
+			  background-color:  #fff;
+			  padding: 10px 35px !important;
+
+			}
+
+			.header_bottom_nav > ul > li > a{
+				color: black;
+				font-size: .9em;
+				font-weight: bold;
+
+			}
+
+			.header_bottom_nav a:hover{
+				cursor: pointer;
+			}
+
+
+			.header_bottom_nav i{
+				color: #cecece;
+				font-size: .6em;
+				margin-left: 7px;
+			}
+
+			.search_form{
+			  width: 565px;
+			  height: 37px;
+			  margin-left: 12px;
+			  box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.1)
+			  background-color: #fff;
+			  /*position: relative;*/
+			}
+			.m_top a{
+				color: #fff;
+				
+			}
+			.m_top{
+				margin-left: 87px;
+				position: relative;
+				z-index: 5000;
+
+			}
+			.m_top .fa-shopping-cart{
+				font-size: 1.2em;
+			}
+			.m_top .fa-chevron-down{
+				font-size: 0.5em;
+				position: relative;
+				top: -3px;
+			} 
+			.m_top > li{
+				position: relative;
+				padding-bottom: 6px;
+			}
+
+			.m_top > li:hover > .submenu{
+				display: block;
+			}
+			
+			.submenu{
+				width: 241px;
+				background-color: #fff;
+				position: absolute;
+				top: 46px;
+				left: 0px;
+				z-index: 1000;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px; 
+				display: none;
+			}
+
+			.submenu a{
+				color: #282829;
+				height: 60px;
+				line-height: 40px;
+				border-radius: 0px !important;
+				border-bottom: 1px solid #efeff0; 
+			}
+
+			.submenu a:hover{
+				cursor: pointer;
+				background: #f0f2f8;
+			}
+
+			.submenu i{
+				color: #2975f1;
+				margin-right: 10px;
+			}
+
+			.btn{
+				margin-left: -20px;
+				font-size: 0.8em;
+			}
+
+			.a_triangleup{
+				position: absolute;
+				top:-40px;
+				left:40px;
+				color: #fff !important;
+				font-size: 4em;
+			}
+			.header_bottom_nav_ul{
+				width: 100%;
+				padding-left: 55px;
+			}
+			.header_bottom_nav_ul > li{
+				position: relative;
+			}
+
+			.header_bottom_nav_ul > li:hover > .category_submenu{
+				display: block;
+			}
+
+			.category_submenu{
+				width: 1250px;
+				
+				background: #fff;
+				position: absolute;
+				display: none;
+				top: 38px;
+				left: 0px;
+				z-index: 1000;
+			}
+          /*submenu ul class*/
+			.m_tv{
+				left: -122px;
+			}
+
+			.m_men{
+				left: -280px;
+			}
+
+			.m_women{
+				left: -355px;
+			}
+
+			.m_baby{
+			 	left: -450px;
+			 }
+			 .m_home{
+			 	left: -575px;
+			 }
+			 .m_sports{
+			 	left: -745px;
+			 }
+			 .m_flight{
+			 	left: -950px;
+			 }
+			.row{
+				margin: 0px;
+			}
+			/*submenu ul class end*/
+
+			.row > div{
+				
+			}
+
+			.category_submenu > div > div.col{
+				height: 530px;
+				overflow: hidden;
+			}
+			/*For subcategory backgroud color */
+			.m_gry{
+				background-color: #f9f9f9;
+			}
+
+			.m_white{
+				background-color: #fff;
+			}
+
+			.category_submenu ul{
+				padding-left: 0px;
+				list-style: none;
+				margin-left: 12px;
+			}
+			.category_submenu ul a{
+				padding-left: 0px;
+				color: #666;
+				font-size: 0.8em;
+				
+			}
+
+			.category_submenu h6{
+				margin-top: 18px;
+				margin-left: 12px;
+			}
+
+			/*.m_search_list{
+				width: 595px;
+				height: 313px;
+				background: #fff;
+				position: absolute;
+				top: 39px;
+				left: 311px;
+				z-index: 2000;
+
+			}
+*/
+	</style>
+</head>
+<body>
+
+	<header>
+		<div class="header_top">
+
+			<a class="navbar-brand float-left" href="#"><img src=""><span class="navbar-brand mb-0 h1"><span style="color: red; font-weight:bold;">A</span>ussie<span style="color:Green;  font-weight:bold;">B</span>angla</span></a>
+    
+	<!-- 
+			<a href="" class="float-left">
+	          <img width="100" src="">
+	          <span class="ep look">Lookup</span>
+	        </a> -->
+	        <form class="d-flex float-left" >
+	        <input class="form-control me-2 search_form" type="search" placeholder="Search for product, brands and more" aria-label="Search" name="Search">
+	        <button class="btn btn-light" type="submit">
+	        	<i class="fa fa-search fa-lg"></i>
+	        </button>
+	        <div class="m_search_list"></div>
+           </form>
+
+           <ul class="nav nav-pills float-left m_top">
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">Login & Signup</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#">More <i class="fa fa-chevron-down "></i></a>
+				     <ul class="nav flex-column submenu">
+				     	<li class="nav-item">
+				     		<i class="fa fa-caret-up a_triangleup"></i>
+				     		<a class="nav-link" href="#"><i class="fa fa-bell"></i> Notification</a>
+				     	</li>
+				     	<li class="nav-item">
+				     		<a class="nav-link" href="#"><i class="fa fa-briefcase"></i> Sell on Aussie Bangla</a>
+				     	</li>
+				     	<li class="nav-item">
+				     		<a class="nav-link" href="#"><i class="fa fa-question-circle"></i> 24x7 Customer Support</a>
+				     	</li>
+				     	<li class="nav-item">
+				     		<a class="nav-link" href="#"><i class="fa fa-line-chart"></i> Advertise</a>
+				     	</li>
+				     </ul>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+				  </li>
+           </ul>
+        
+	</div>
+			
+</div>
+
+       <div class="header_bottom header_bottom_nav">
+       	  <ul class="nav float-left header_bottom_nav_ul">
+       	  	<li class="nav-item">
+       	  		<a class="nav-link" href="">Electronics  <i class="fa fa-chevron-down "></i></a>
+       	  		<div class="category_submenu">
+       	  			<div class="row">
+       	  				<div class="col m_white">
+       	  					<h6>Mobile <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">MI</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Realme</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Oppo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">One Plus</a>
+       	  						</li>
+       	  					</ul>
+       	  				</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6>Laptop <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Dell</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Lenevo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hp</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Aplle</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col m_white">
+	       	  				<h6>Laptop Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Keyborad</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Ram</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hard Drive</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6> Mobile Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Back Cover</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Headphone</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Memory</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col m_white">
+	       	  				<h6>Speakers <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Theatres</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Blutooth Speaker</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Google Next</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">DTH set up top box</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Audio</a>
+       	  						</li>
+       	  					</ul>
+	       	  				
+       	  					
+	       	  			</div>
+       	  			</div>
+       	  		</div>
+       	  	</li>
+       	  	<li class="nav-item">
+       	  		<a class="nav-link" href="">TV & Appliances  <i class="fa fa-chevron-down "></i></a>
+       	  		<div class="category_submenu m_tv">
+       	  			<div class="row">
+       	  				<div class="col">
+       	  					<h6>Mobile <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">MI</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Realme</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Oppo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">One Plus</a>
+       	  						</li>
+       	  					</ul>
+       	  				</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6>Laptop <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Dell</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Lenevo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hp</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Aplle</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Laptop Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Keyborad</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Ram</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hard Drive</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6> Mobile Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Back Cover</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Headphone</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Memory</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Speakers <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Theatres</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Blutooth Speaker</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Google Next</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">DTH set up top box</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Audio</a>
+       	  						</li>
+       	  					</ul>
+	       	  				
+       	  					
+	       	  			</div>
+       	  			</div>
+       	  		</div>
+       	  	</li>
+       	  	<li class="nav-item">
+       	  		<a class="nav-link" href="">Men  <i class="fa fa-chevron-down "></i></a>
+       	  		<div class="category_submenu m_men">
+       	  			<div class="row">
+       	  				<div class="col ">
+       	  					<h6>Mobile <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">MI</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Realme</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Oppo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">One Plus</a>
+       	  						</li>
+       	  					</ul>
+       	  				</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6>Laptop <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Dell</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Lenevo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hp</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Aplle</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Laptop Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Keyborad</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Ram</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hard Drive</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6> Mobile Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Back Cover</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Headphone</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Memory</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Speakers <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Theatres</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Blutooth Speaker</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Google Next</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">DTH set up top box</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Audio</a>
+       	  						</li>
+       	  					</ul>
+	       	  				
+       	  					
+	       	  			</div>
+       	  			</div>
+       	  		</div>
+       	  	</li>
+       	  	<li class="nav-item">
+       	  		<a class="nav-link" href="">Women  <i class="fa fa-chevron-down "></i></a>
+       	  		<div class="category_submenu m_women">
+       	  			<div class="row">
+       	  				<div class="col">
+       	  					<h6>Mobile <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">MI</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Realme</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Oppo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">One Plus</a>
+       	  						</li>
+       	  					</ul>
+       	  				</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6>Laptop <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Dell</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Lenevo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hp</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Aplle</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Laptop Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Keyborad</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Ram</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hard Drive</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6> Mobile Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Back Cover</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Headphone</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Memory</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Speakers <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Theatres</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Blutooth Speaker</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Google Next</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">DTH set up top box</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Audio</a>
+       	  						</li>
+       	  					</ul>
+	       	  				
+       	  					
+	       	  			</div>
+       	  			</div>
+       	  		</div>
+       	  	</li>
+       	  	<li class="nav-item">
+       	  		<a class="nav-link" href="">Baby & Kids  <i class="fa fa-chevron-down "></i></a>
+       	  		<div class="category_submenu m_baby">
+       	  			<div class="row">
+       	  				<div class="col">
+       	  					<h6>Mobile <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">MI</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Realme</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Oppo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">One Plus</a>
+       	  						</li>
+       	  					</ul>
+       	  				</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6>Laptop <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Dell</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Lenevo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hp</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Aplle</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Laptop Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Keyborad</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Ram</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hard Drive</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6> Mobile Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Back Cover</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Headphone</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Memory</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Speakers <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Theatres</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Blutooth Speaker</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Google Next</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">DTH set up top box</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Audio</a>
+       	  						</li>
+       	  					</ul>
+	       	  				
+       	  					
+	       	  			</div>
+       	  			</div>
+       	  		</div>
+       	  	</li>
+       	  	<li class="nav-item">
+       	  		<a class="nav-link" href="">Home & Furniture  <i class="fa fa-chevron-down "></i></a>
+       	  		<div class="category_submenu m_home">
+       	  			<div class="row">
+       	  				<div class="col">
+       	  					<h6>Mobile <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">MI</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Realme</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Oppo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">One Plus</a>
+       	  						</li>
+       	  					</ul>
+       	  				</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6>Laptop <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Dell</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Lenevo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hp</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Aplle</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Laptop Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Keyborad</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Ram</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hard Drive</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6> Mobile Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Back Cover</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Headphone</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Memory</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Speakers <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Theatres</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Blutooth Speaker</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Google Next</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">DTH set up top box</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Audio</a>
+       	  						</li>
+       	  					</ul>
+	       	  				
+       	  					
+	       	  			</div>
+       	  			</div>
+       	  		</div>
+       	  	</li>
+       	  	<li class="nav-item">
+       	  		<a class="nav-link" href="">Sports, Books & More  <i class="fa fa-chevron-down "></i></a>
+       	  		<div class="category_submenu m_sports">
+       	  			<div class="row">
+       	  				<div class="col">
+       	  					<h6>Mobile <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">MI</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Realme</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Oppo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">One Plus</a>
+       	  						</li>
+       	  					</ul>
+       	  				</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6>Laptop <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Dell</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Lenevo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hp</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Aplle</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Laptop Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Keyborad</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Ram</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hard Drive</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col m_gry">
+	       	  				<h6> Mobile Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Back Cover</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Headphone</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Memory</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Speakers <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Theatres</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Blutooth Speaker</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Google Next</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">DTH set up top box</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Audio</a>
+       	  						</li>
+       	  					</ul>
+	       	  				
+       	  					
+	       	  			</div>
+       	  			</div>
+       	  		</div>
+       	  	</li>
+       	  	<li class="nav-item">
+       	  		<a class="nav-link" href="">Flight  <i class="fa fa-chevron-down "></i></a>
+       	  		<!-- <div class="category_submenu m_flight">
+       	  			<div class="row">
+       	  				<div class="col">
+       	  					<h6>Mobile <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">MI</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Realme</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Oppo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">One Plus</a>
+       	  						</li>
+       	  					</ul>
+       	  				</div>
+	       	  			<div class="col">
+	       	  				<h6>Laptop <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Dell</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Lenevo</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hp</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Aplle</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Samsung</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Laptop Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Keyborad</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Ram</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Hard Drive</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6> Mobile Accesories <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Battery</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Charger</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Back Cover</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Headphone</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Memory</a>
+       	  						</li>
+       	  					</ul>
+	       	  			</div>
+	       	  			<div class="col">
+	       	  				<h6>Speakers <i class="fa fa-caret-right"></i></h6>
+       	  					<ul>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Theatres</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Blutooth Speaker</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Google Next</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">DTH set up top box</a>
+       	  						</li>
+       	  						<li class="nav-item">
+       	  							<a class="nav-link" href="#">Home Audio</a>
+       	  						</li>
+       	  					</ul>
+	       	  				
+       	  					
+	       	  			</div>
+       	  			</div>
+       	  		</div> -->
+       	  	</li>
+       	  	<li class="nav-item">
+       	  		<a class="nav-link" href="">Offer Zone </a>
+       	  	</li>
+       	  	
+       	  </ul>
+       </div>
+</header>
+     <script>
+     	$(window) .on('scroll', function(event){ 
+     		var scrollValue = $(window).scrollTop();
+     		if(scrollValue>0){
+     			$('.header_top').addClass('fixed-top');
+     		}else{
+     			$('.header_top').removeClass('fixed-top');
+     		}
+     	});
+     </script>
+</body>
+</html>

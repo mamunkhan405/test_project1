@@ -1,0 +1,56 @@
+header{
+	
+	border: 1px solid red; 
+}
+
+.header_top{
+	height: 56px;
+	background-color:  #3a3d50;
+
+}
+
+.header_bottom{
+	height: 40px;
+	background-color:  blue;
+
+}
+
+.search_form{
+	width: 565px;
+	height: 37px;
+	background-color: #fff;
+}
+.ep{
+	font-style: italic;
+	font-size: 0.7em;
+}
+.look{
+	color: #fff;
+
+}
+
+
+/* Styles for wrapping the search box */
+
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #fff;
+}
